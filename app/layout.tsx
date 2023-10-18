@@ -1,8 +1,11 @@
 import './globals.css';
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+import NavBar from './NavBar';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Asunto | Issue Tracker',
@@ -16,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar />
+        <main>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
