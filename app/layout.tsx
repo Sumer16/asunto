@@ -1,5 +1,6 @@
-import './globals.css';
 import '@radix-ui/themes/styles.css';
+import './theme-config.css';
+import './globals.css';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -7,11 +8,15 @@ import { Theme } from '@radix-ui/themes';
 
 import NavBar from './NavBar';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+ });
 
 export const metadata: Metadata = {
   title: 'Asunto | Issue Tracker',
-  description: 'Asunto is issue tracker application developed using NextJS 13 & TailwindCSS',
+  description: 'Asunto is an issue tracker application developed using NextJS 13, MySQL, Prisma, TailwindCSS and RadixUI.',
 }
 
 export default function RootLayout({
@@ -21,8 +26,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Theme>
+      <body className={inter.variable}>
+        <Theme accentColor="violet">
           <NavBar />
           <main className='p-5'>
             {children}
