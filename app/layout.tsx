@@ -25,12 +25,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <link rel='icon' href="/favicon.ico" type="image/x-icon" sizes="any" />
+    <html lang='en'>
+      <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
       <body className={inter.variable}>
-        <Theme accentColor="violet">
+        <Theme accentColor='violet'>
           <NavBar />
-          <main className="p-5">
+          <main className='p-5'>
             {children}
           </main>
         </Theme>

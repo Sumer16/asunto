@@ -17,16 +17,16 @@ const NavBar = () => {
   ];
   
   return (
-    <nav className="flex items-center space-x-6 border-b mb-5 px-5 h-14">
-      <Link href="/"><IoBugSharp /></Link>
-      <ul className="flex space-x-6">
+    <nav className='flex items-center space-x-6 border-b mb-5 px-5 h-14'>
+      <Link href='/'><IoBugSharp /></Link>
+      <ul className='flex space-x-6'>
         {links.map((link) => (
-          <Link 
-            key={link.href} 
+          <Link
+            key={link.href}
             className={classnames({
-              "text-zinc-900": link.href === currentPath,
-              "text-zinc-500": link.href !== currentPath, 
-              "hover:text-zinc-800 transition-colors": true,
+              'text-zinc-900': link.href === currentPath,
+              'text-zinc-500': link.href !== currentPath,
+              'hover:text-zinc-800 transition-colors': true,
             })}
             href={link.href}
           >
