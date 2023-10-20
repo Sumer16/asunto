@@ -14,6 +14,7 @@ import { z } from 'zod';
 import { Button, Callout, Text, TextField } from '@radix-ui/themes';
 import { RxInfoCircled } from 'react-icons/rx';
 import ErrorMessage from '@/app/components/ErrorMessage'
+import Spinner from '@/app/components/Spinner';
 
 type IssueForm = z.infer<typeof issueSchema>;
 
@@ -24,6 +25,18 @@ const NewIssuePage = () => {
   const router = useRouter();
 
   const [ error, setError ] = useState('');
+  const [isSubmitting, setSubmitting] = useState(false);
+
+  const onSubmit = handleSubmit(async (data) => {
+    try {
+      setSubmitting(true);
+      await axios.post('/api/issues', data);
+      router.push('/issues');
+    } catch (error) {
+      setSubmitting(false);
+      setError('An unexpected error occurred.');
+    }
+  });
 
   return (
     <div className='max-w-xl'>
@@ -38,14 +51,7 @@ const NewIssuePage = () => {
       </Callout.Root>)}
       <form 
         className='space-y-3'
-        onSubmit={handleSubmit(async (data) => {
-          try {
-            await axios.post('/api/issues', data);
-            router.push('/issues');
-          } catch (error) {
-            setError('An unexpected error occurred.');
-          }
-        })}
+        onSubmit={onSubmit}
       >
         <TextField.Root>
           <TextField.Input placeholder='Create a new Issue...' {...register('title')} />
@@ -57,7 +63,9 @@ const NewIssuePage = () => {
           render={({field}) => <SimpleMDE placeholder='Add description for your issue...' {...field} />}
         />
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
-        <Button>Submit New Issue</Button>
+        <Button disabled={isSubmitting}>
+          Submit New Issue {isSubmitting && <Spinner />}
+        </Button>
       </form>
     </div>
   )
