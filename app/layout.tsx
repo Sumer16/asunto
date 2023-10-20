@@ -26,10 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel='icon' href="/favicon.ico" type="image/x-icon" sizes="any" />
       <body className={inter.variable}>
         <Theme accentColor="violet">
           <NavBar />
-          <main className='p-5'>
+          <main className="p-5">
             {children}
           </main>
         </Theme>
