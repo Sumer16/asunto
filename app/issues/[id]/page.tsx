@@ -6,6 +6,7 @@ import prisma from '@/prisma/client';
 import EditIssueButton from './EditIssueButton';
 import DeleteIssueButton from './DeleteIssueButton';
 import IssueDetails from './IssueDetails';
+import AssigneeSelect from './AssigneeSelect';
 
 import authOptions from '@/app/auth/authOptions';
 
@@ -37,6 +38,7 @@ const IssueDetailPage = async ({ params }: Props) => {
       {session && (
         <Box>
           <Flex direction='column' gap='4'>
+            <AssigneeSelect />
             <EditIssueButton issueId={issue.id} />
             <DeleteIssueButton issueId={issue.id} />
           </Flex>

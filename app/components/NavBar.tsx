@@ -69,8 +69,13 @@ const AuthStatus = () => {
 
   if (status === 'loading') return <Skeleton width='3rem' />;
 
-  if (status === 'unauthenticated')
-    return <Link className='nav-link' href='/api/auth/signin'>Login</Link>;
+  if (status === 'unauthenticated'){
+    return (
+      <Link className='nav-link' href='/api/auth/signin'>
+        Login
+      </Link>
+    );
+  }
 
   return (
     <Box>
@@ -82,6 +87,7 @@ const AuthStatus = () => {
             size='2'
             radius='full'
             className='cursor-pointer'
+            referrerPolicy='no-referrer'
           />
         </DropdownMenu.Trigger>
         <DropdownMenu.Content>
