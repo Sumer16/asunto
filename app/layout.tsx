@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang='en'>
       <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
       <body className={inter.variable}>
-        <Theme accentColor='violet'>
+        <Theme appearance='dark' accentColor='violet'>
           <NavBar />
           <main className='p-5'>
             <Container>

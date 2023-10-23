@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import classnames from 'classnames'; // like cn in shadcn/ui, this package helps us to render classes based on conditions
 
 import { IoBugSharp } from 'react-icons/io5';
+import Image from 'next/image'
 
 const NavBar = () => {
   const currentPath = usePathname(); // we use this to find the current working page we are on.
@@ -18,14 +19,16 @@ const NavBar = () => {
   
   return (
     <nav className='flex items-center space-x-6 border-b mb-5 px-5 h-14'>
-      <Link href='/'><IoBugSharp /></Link>
+      <Link href='/'>
+        <Image src='/favicon.ico' width={30} height={30} alt='Asunto Icon' />
+      </Link>
       <ul className='flex space-x-6'>
         {links.map((link) => (
           <Link
             key={link.href}
             className={classnames({
-              'text-zinc-900': link.href === currentPath,
-              'text-zinc-500': link.href !== currentPath,
+              'text-zinc-700': link.href === currentPath,
+              'text-zinc-400': link.href !== currentPath,
               'hover:text-zinc-800 transition-colors': true,
             })}
             href={link.href}
