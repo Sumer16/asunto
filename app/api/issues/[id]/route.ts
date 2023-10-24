@@ -9,7 +9,7 @@ import authOptions from '@/app/auth/authOptions';
 
 export async function PATCH(
   request: NextRequest, 
-  { params }: { params: { id: string }}
+  { params }: { params: { id: string } }
 ) {
   try {
     const session = await getServerSession(authOptions);
@@ -29,7 +29,7 @@ export async function PATCH(
       });
 
       if (!user)
-        return NextResponse.json({ error: "Invalid user." }, { status: 400 });
+        return NextResponse.json({ error: 'Invalid user.' }, { status: 400 });
     }
   
     const issue = await prisma.issue.findUnique({
