@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <link rel='icon' href='/favicon.ico' type='image/x-icon' sizes='any' />
+      <link rel='icon' href='/asunto.svg' type='image/x-icon' sizes='any' />
       <body className={inter.variable}>
         <QueryClientProvider>
           <AuthProvider>
