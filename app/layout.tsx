@@ -19,6 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Asunto | Issue Tracker',
   description: 'Asunto is an issue tracker application developed using NextJS 13, MySQL, Prisma, TailwindCSS and RadixUI.',
+  manifest: '/manifest.json',
+  icons: { apple: '/icon.png' },
+  themeColor: '#6E56CF',
 }
 
 export default function RootLayout({
