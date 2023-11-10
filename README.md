@@ -3,8 +3,6 @@
 
 ![Asunto Issue Tracker Landing Page](/asunto.png)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## About Asunto Issue Tracker
 
 This is a fully-functional full-stack issue tracker application that helps product owners to track issues for their teams in a productive and secure way.
