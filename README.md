@@ -6,7 +6,7 @@
 ## About Asunto Issue Tracker
 
 This is a fully-functional full-stack issue tracker application that helps product owners to track issues for their teams in a productive and secure way.
-This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, MySQL, PlanetScale, Prisma, NextAuth and more.
+This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, PostgreSQL, PlanetScale, Prisma, NextAuth and more.
 
 ## Key Features
 
@@ -17,8 +17,8 @@ This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, MySQL, 
 - **Charts:** Visualize the issues in a more seamless and detailed format
 - **Stunning UI:** Beautifully designed using TailwindCSS and Radix UI
 - **Responsiveness:** Works flawlessly on both desktop and mobile devices
-- **Database & ORM:** MySQL for robustness & Prisma for database operations
-- **MySQL Database:** Utilize Planetscale for your MySQL database
+- **Database & ORM:** PostgreSQL for robustness & Prisma for database operations
+- **PostgreSQL Database:** Utilize Planetscale for your PostgreSQL database
 - **Authentication:** Secured the app using NextAuth
 
 ## Installation
@@ -58,12 +58,14 @@ NEXTAUTH_URL=your_nextauth_url
 
 ### Setup Prisma
 
-Add MySQL Database (I used PlanetScale, you can use any of your own choice):
+Add PostgreSQL Database (I used PlanetScale but later changed to Supabase, you can use any of your own choice):
 
 ```bash
 npx prisma generate
 npx prisma db push
 ```
+
+NOTE: The setup to migrate is very simple for MySQL to PostgreSQL.
 
 ### Run the development server
 
@@ -114,4 +116,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Credits
 
-- [Programming with Mosh](https://www.codewithmosh.com/) => Thanks for making this amazing tutorial! You have always been a great teacher and a great inspiration for developing full-stack projects.
+- [Programming with Mosh](https://www.codewithmosh.com/) => Thanks for making this amazing tutorial!
