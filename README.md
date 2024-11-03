@@ -6,7 +6,7 @@
 ## About Asunto Issue Tracker
 
 This is a fully-functional full-stack issue tracker application that helps product owners to track issues for their teams in a productive and secure way.
-This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, PostgreSQL, PlanetScale, Prisma, NextAuth and more.
+This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, PostgreSQL, Supabase, Prisma, NextAuth and more.
 
 ## Key Features
 
@@ -18,7 +18,7 @@ This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, Postgre
 - **Stunning UI:** Beautifully designed using TailwindCSS and Radix UI
 - **Responsiveness:** Works flawlessly on both desktop and mobile devices
 - **Database & ORM:** PostgreSQL for robustness & Prisma for database operations
-- **PostgreSQL Database:** Utilize Planetscale for your PostgreSQL database
+- **PostgreSQL Database:** Utilize Supabase for your PostgreSQL database
 - **Authentication:** Secured the app using NextAuth
 
 ## Installation
@@ -58,14 +58,14 @@ NEXTAUTH_URL=your_nextauth_url
 
 ### Setup Prisma
 
-Add PostgreSQL Database (I used PlanetScale but later changed to Supabase, you can use any of your own choice):
+Add MySQL Database (I used PlanetScale but later changed to Supabase, you can use any of your own choice):
 
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
-NOTE: The setup to migrate is very simple for MySQL to PostgreSQL.
+NOTE: I migrated my database from PlanetScale to Supabase. The steps to migrate is very simple for MySQL to PostgreSQL. Check the docs.
 
 ### Run the development server
 
