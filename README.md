@@ -48,6 +48,7 @@ After the dependencies have been installed, create a ```.env``` file in the root
 
 ```env
 DATABASE_URL=your_db_url
+DIRECT_URL=your_migration_direct_url
 
 GOOGLE_CLIENT_SECRET=your_google_secret
 GOOGLE_CLIENT_ID=your_google_id
