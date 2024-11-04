@@ -19,7 +19,7 @@ This platform is built using Next.js 13.5, React, Radix UI, TailwindCSS, Postgre
 - **Responsiveness:** Works flawlessly on both desktop and mobile devices
 - **Database & ORM:** PostgreSQL for robustness & Prisma for database operations
 - **PostgreSQL Database:** Utilize Supabase for your PostgreSQL database
-- **Authentication:** Secured the app using NextAuth
+- **Authentication:** Web app security using NextAuth & Google Sign-in
 
 ## Installation
 
