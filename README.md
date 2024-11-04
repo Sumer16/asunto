@@ -3,6 +3,8 @@
 
 ![Asunto Issue Tracker Landing Page](/asunto.png)
 
+### NOTE: This project is no longer maintained.
+
 ## About Asunto Issue Tracker
 
 This is a fully-functional full-stack issue tracker application that helps product owners to track issues for their teams in a productive and secure way.
